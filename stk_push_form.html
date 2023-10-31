@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DTB Bank STK Push Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .btn-submit {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>DTB Bank STK Push Form</h2>
+        <form method="post" action="stk_push.php">
+            <div class="form-group">
+                <label for="transactionId">Transaction ID:</label>
+                <input type="text" name="transactionId" required>
+            </div>
+            <div class="form-group">
+                <label for="amount">Amount:</label>
+                <input type="number" name="amount" required>
+            </div>
+            <div class="form-group">
+                <label for="merchantId">Merchant ID:</label>
+                <input type="number" name="merchantId" required>
+            </div>
+            <div class="form-group">
+                <label for="payerAccount">Payer Account:</label>
+                <input type="text" name="payerAccount" required>
+            </div>
+            <div class="form-group">
+                <label for="narration">Narration:</label>
+                <input type="text" name="narration" required>
+            </div>
+            <button type="submit" class="btn-submit">Initiate STK Push</button>
+        </form>
+    </div>
+</body>
+</html>
