@@ -1,2 +1,2 @@
 # DTB bank api wrapper
- a wrapper module around dtb bank api
+ A wrapper module around dtb bank api.This is a module that simplifies logic around DTB(Diamond Trust Bank) API.
