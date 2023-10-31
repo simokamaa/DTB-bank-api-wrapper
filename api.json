@@ -1,0 +1,113 @@
+{
+	"info": {
+		"_postman_id": "dd6388ac-4743-4038-a01e-1e2d0ddb54f3",
+		"name": "Kasley",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5927790"
+	},
+	"item": [
+		{
+			"name": "STK",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ1OEVKTTN1bjJJdFdpSWZrd2lGbVRUaG13SWs5Z3JENm10N0lYd2dRMXU4In0.eyJleHAiOjE2OTg2Njk0NTksImlhdCI6MTY5ODY2ODg1OSwianRpIjoiNjYwNjZmZjItYjZiOC00ZGNmLThjZmMtY2MxNGVjYTRkZTgyIiwiaXNzIjoiaHR0cHM6Ly91YXQtYXBwLmFzdHJhYWZyaWNhLmNvL3JlYWxtcy9pbmZpbml0aV9wYXlfdjIiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiZmZkZGM5Y2YtOWU1YS00MTk5LWIyNTAtYzcwYWU0ZDQxZjYwIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiaW5maW5pdGlfcGF5X3YyX2FwaSIsInNlc3Npb25fc3RhdGUiOiIzOTUxNDY5Ni1hM2YyLTQ3MzMtODA4Yy0zNGZiYmIxNDA4NTciLCJhY3IiOiIxIiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iLCJkZWZhdWx0LXJvbGVzLWluZmluaXRpX3BheV92MiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiYXBpX3Njb3BlIGVtYWlsIHByb2ZpbGUgaW5maW50aV9wYXlfdjJfYXBpIiwic2lkIjoiMzk1MTQ2OTYtYTNmMi00NzMzLTgwOGMtMzRmYmJiMTQwODU3IiwiZW1haWxfdmVyaWZpZWQiOnRydWUsInByZWZlcnJlZF91c2VybmFtZSI6Imthc2xleSIsImdpdmVuX25hbWUiOiIiLCJmYW1pbHlfbmFtZSI6IiIsImVtYWlsIjoicGFyYWdvbm5vYWhAZ21haWwuY29tIn0.ZlGOxXyMAeeAi2d815Zuqs1hzbRyPdyhesbsEBZCfkkaM_4T6HL6Jb-htjXxH3EvUND4q3ej_uzv3vB70GRm1bxGiiCkD-5aNVuNuSoZbKlT3rkztgHkCnlf1QQYvrZ0ZT8pWLjSqt4V4mDPsMulCw6w3-H573peaJUeUnSe_uW2-0wY1x88p-NQdUBAlm4ZE7BkLVmjPSytEFnO-iuMry6v1EEe9X5gw8bbZLXdM4yiKjnLd9bt7muiXHCE5Cw0-3-XwK4-ZB_A5HWyw3-he5sX1-XYAfloaW14iMdU8R8XQbI00a9DPTLsrwA1l4N1iUwShjCQe9yz8neaAlHgow",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"transactionId\": \"{{$randomBankAccount}}\",\r\n    \"amount\": 10,\r\n    \"merchantId\": 34,\r\n    \"transactionTypeId\": 1,\r\n    \"payerAccount\": \"254726794142\",\r\n    \"narration\": \"Testing \"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://uat-app.astraafrica.co:9090/infinitipay/v2/payments/paymentRequest",
+					"protocol": "https",
+					"host": [
+						"uat-app",
+						"astraafrica",
+						"co"
+					],
+					"port": "9090",
+					"path": [
+						"infinitipay",
+						"v2",
+						"payments",
+						"paymentRequest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "infiniti_pay_v2_api",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "sSrvLDJkVmH5HPDL2iIPYMAddRqM7foe",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "kasley",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "X7Bs4VcbWWO5wL7",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://uat-app.astraafrica.co:9090/infinitiPay/v1/auth/token",
+					"protocol": "https",
+					"host": [
+						"uat-app",
+						"astraafrica",
+						"co"
+					],
+					"port": "9090",
+					"path": [
+						"infinitiPay",
+						"v1",
+						"auth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
